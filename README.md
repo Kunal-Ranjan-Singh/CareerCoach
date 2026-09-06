@@ -1,92 +1,80 @@
+# 🚀 AI Career Coach
 
-AI Career Coach is a Flask-based web application that leverages OpenAI's GPT models and FAISS vector search to provide intelligent resume evaluations and interactive career guidance. Users can upload their resumes and receive a summarized analysis, then interact with the system to ask career-related questions.
+**AI Career Coach** is a Flask-based web application that leverages OpenAI's GPT models and FAISS vector search to provide intelligent resume evaluations and interactive career guidance. Users can upload their resumes to receive a structured analysis and interact with an AI to ask specific career-related questions based on their profile.
 
-Features:-
-Resume Analysis
-Upload your PDF resume and receive a structured summary including:-
+---
 
-Career Objective
+## ✨ Features
 
-Skills and Expertise
+*   📄 **Resume Analysis:** Upload your PDF resume and instantly receive a comprehensive, structured summary including:
+    *   Career Objective
+    *   Skills and Expertise
+    *   Professional Experience
+    *   Educational Background
+    *   Notable Achievements
+*   💬 **Interactive Q&A System:** Ask career-related questions directly based on your resume's content and get smart, contextual responses.
+*   🔍 **Vector Search Integration:** Utilizes FAISS for lightning-fast, efficient document retrieval from embedded resume data.
 
-Professional Experience
+---
 
-Educational Background
+## 🛠️ Tech Stack
 
-Notable Achievements
+| Category | Technologies |
+| :--- | :--- |
+| **Backend** | Python, Flask |
+| **Frontend** | HTML, Tailwind CSS, Framer Motion |
+| **AI & NLP** | OpenAI GPT-4, OpenAI ADA Embeddings, LangChain |
+| **Data Processing** | PyPDF2 (PDF parsing), FAISS (Vector Database) |
 
-Question Answering System
-Ask career-related questions directly based on your resume content and get smart, contextual responses.
+---
 
-Vector Search Integration
-Uses FAISS for efficient document retrieval from embedded resume data.
+## 📂 Project Structure
 
-🛠️ Tech Stack
-Backend: Python, Flask
+```text
+├── app.py                # Main Flask application logic
+├── requirements.txt      # Project dependencies (assumed)
+├── index.faiss           # FAISS index file (generated dynamically)
+├── index.pkl             # FAISS metadata file (generated dynamically)
+├── uploads/              # Directory to store uploaded user PDFs
+└── templates/            # HTML templates (Jinja2)
+    ├── index.html        # Resume upload page
+    ├── results.html      # Resume analysis results display
+    ├── ask.html          # QA input interface
+    ├── qa_results.html   # QA output display
+    └── query_results.html# [Optional] Extra query display
+```
 
-Frontend: HTML, Tailwind CSS, Framer Motion
+## 🔧 Setup Instructions
 
-AI Models: OpenAI GPT-4, ADA Embeddings
+Follow these steps to get the project running on your local machine.
 
-Vector DB: FAISS
-
-PDF Processing: PyPDF2
-
-LangChain: For prompt chaining and document QA
-
-Project Structure
-bash
-Copy
-Edit
-├── app.py                  # Main Flask application
-├── templates/              # HTML templates (Jinja2)
-│   ├── index.html          # Resume upload page
-│   ├── results.html        # Resume analysis results
-│   ├── ask.html            # QA input page
-│   ├── qa_results.html     # QA output page
-│   └── query_results.html  # [Optional] extra query display
-├── uploads/                # Directory to store uploaded PDFs
-├── index.faiss             # FAISS index file
-├── index.pkl               # FAISS metadata file
-🔧 Setup Instructions
-Clone the Repository
-
-
-
-bash
-Copy
-Edit
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/yourusername/ai-career-coach.git](https://github.com/yourusername/ai-career-coach.git)
+cd ai-career-coach
+```
+### 2. Create and activate Virtual Environment
+# On macOS/Linux:
+```
 python -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
-Install Dependencies
+source venv/bin/activate
+```
 
-bash
-Copy
-Edit
+# On Windows:
+```
+python -m venv venv
+venv\Scripts\activate
+```
+### 3. Install dependencies
+```
 pip install -r requirements.txt
-Set OpenAI API Key
+```
 
-Replace the api_key fields in app.py with your own key or manage via environment variables.
-
-Run the App
-
-bash
-Copy
-Edit
+### 4. Run the application
+```
 python app.py
-Visit http://localhost:5000 in your browser.
-
-Notes
-The app uses LangChain for both summarization and retrieval-based QA.
-
-Ensure your API key usage complies with OpenAI's terms.
-
-Uploaded resumes must be in PDF format.
-
-FAISS index is recreated on each new upload.
+```
+Once the server starts, open your web browser and navigate to: http://localhost:5000
 
 Demo
 Coming soon...
-
-Author:
-Kunal – Made with ❤️
