@@ -1,4 +1,4 @@
-# 🚀 AI Career Coach
+# 🚀 AI Career Assistant
 
 **AI Career Coach** is a Flask-based web application that leverages OpenAI's GPT models and FAISS vector search to provide intelligent resume evaluations and interactive career guidance. Users can upload their resumes to receive a structured analysis and interact with an AI to ask specific career-related questions based on their profile.
 
